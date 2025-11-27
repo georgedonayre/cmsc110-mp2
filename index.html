@@ -13,9 +13,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <style>
-      body {
-        padding-top: 70px;
-      }
       .order-count {
         background-color: #dc3545;
         color: white;
@@ -23,6 +20,25 @@
         border-radius: 10px;
         font-size: 0.75rem;
         margin-left: 4px;
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("assets/img/hero-image.jpg");
+        min-height: 90vh;
+      }
+
+      .hero-section {
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+      }
+
+      .card {
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
       }
     </style>
   </head>
@@ -75,10 +91,141 @@
         </div>
       </nav>
     </header>
+    <!-- MAIN CONTENT HERE -->
+    <main>
+      <section class="hero-section text-white text-center">
+        <div class="container py-5">
+          <h1 class="display-4 fw-bold mb-3">Lorem ipsum dolor sit amet.</h1>
+          <p class="lead mb-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+          <a href="products.html" class="btn btn-primary btn-lg bg-primary">
+            <i class="bi bi-cart-check"></i> SpayLater
+          </a>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <h2 class="mb-3">Why Us?</h2>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam, minus! Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Repellat, non! Lorem ipsum dolor sit amet.
+              </p>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                velit architecto obcaecati exercitationem odit aspernatur
+                possimus.
+              </p>
+              <a href="about.html" class="btn btn-outline-dark">
+                Learn More About Us <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="assets/img/hero-image.jpg"
+                alt="About Us"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">Best Sellers</h2>
+          <p class="text-center text-muted mb-5">Check these out</p>
+
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/img/hero-image.jpg"
+                  class="card-img-top"
+                  alt="sheesh"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cemento</h5>
+                  <p class="card-text text-muted">Description dito</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <span class="h5 text-primary mb-0">777.00</span>
+                    <button class="btn btn-primary btn-sm">
+                      <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/img/hero-image.jpg"
+                  class="card-img-top"
+                  alt="sheesh"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cemento</h5>
+                  <p class="card-text text-muted">Description dito</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <span class="h5 text-primary mb-0">777.00</span>
+                    <button class="btn btn-primary btn-sm">
+                      <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/img/hero-image.jpg"
+                  class="card-img-top"
+                  alt="sheesh"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cemento</h5>
+                  <p class="card-text text-muted">Description dito</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <span class="h5 text-primary mb-0">777.00</span>
+                    <button class="btn btn-primary btn-sm">
+                      <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- view all products button -->
+          <div class="text-center mt-4">
+            <a href="products.html" class="btn btn-outline-primary btn-lg">
+              View All Products <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH BAR SECTION -->
+      <section class="py-5"></section>
+
+      <!-- CONTACT SNIPPET -->
+      <section class="py-5 bg-primary text-white"></section>
+    </main>
 
     <!-- FOOTER -->
     <!-- Bootstrap is like tailwind but messy -->
-    <footer class="bg-dark text-white mt-5 py-4 fixed-bottom">
+    <footer class="bg-dark text-white mt-5 py-4">
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-3">
