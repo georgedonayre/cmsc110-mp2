@@ -12,16 +12,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      .order-count {
-        background-color: #dc3545;
-        color: white;
-        padding: 2px 6px;
-        border-radius: 10px;
-        font-size: 0.75rem;
-        margin-left: 4px;
-      }
-
       .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
           url("assets/img/hero-image.jpg");
@@ -43,54 +35,7 @@
     </style>
   </head>
   <body>
-    <header>
-      <!-- NAVBAR HERE -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <h5>
-            <a class="navbar-brand" href="index.html">Hatdog</a>
-          </h5>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar-main"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-main">
-            <!-- ml-auto = ms-auto woah -->
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.html">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="account.html">
-                  <i class="bi bi-person"></i> Account
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cart.html">
-                  <i class="bi bi-cart"></i> Cart
-                  <span class="order-count" id="cart-count">0</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div id="header"></div>
     <!-- MAIN CONTENT HERE -->
     <main>
       <section class="hero-section text-white text-center">
@@ -265,56 +210,9 @@
 
     <!-- FOOTER -->
     <!-- Bootstrap is like tailwind but messy -->
-    <footer class="bg-dark text-white mt-5 py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <h5>Hatdog</h5>
-            <p class="text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-              voluptatibus?
-            </p>
-          </div>
-          <div class="col-md-4 mb-3">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="products.html" class="text-white text-decoration-none"
-                  >Products</a
-                >
-              </li>
-              <li>
-                <a href="about.html" class="text-white text-decoration-none"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="contact.html" class="text-white text-decoration-none"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 mb-3">
-            <h5>Connect</h5>
-            <a href="#" class="text-white me-3"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="#" class="text-white me-3"
-              ><i class="bi bi-twitter"></i
-            ></a>
-            <a href="#" class="text-white me-3"
-              ><i class="bi bi-instagram"></i
-            ></a>
-          </div>
-        </div>
-        <hr />
-        <div class="text-center text-white">
-          <p class="mb-0">&copy; 2025 Hatdog. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/search.js"></script>
+    <script src="assets/js/layout.js"></script>
   </body>
 </html>
