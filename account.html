@@ -43,9 +43,12 @@
                     <div class="input-group mb-3">
                       <span class="input-group-text"><i class="bi bi-lock"></i></span>
                       <input type="password" id="password" class="form-control">
+                      <span class="input-group-text" style="cursor: pointer;" onclick="togglePassword()">
+                        <i class="bi bi-eye-slash text-muted"></i>
+                        </span>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary container mb-2">sign in</button>
+
+                    <a class="btn btn-primary container mb-2 border" href="index.html" role="button">sign in</a>
                 </form>
             </div>
         </div>
@@ -54,10 +57,11 @@
             <p class="lead mb-5">Don't have an account? <a href="#a">Sign up</a>.</p>
         </div>
     </div>
-    
+    <!-- end of Sign in section -->
     <!-- FOOTER -->
     <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/js/account.js"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/layout.js"></script>
   </body>
