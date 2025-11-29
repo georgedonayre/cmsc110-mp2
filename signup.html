@@ -13,95 +13,80 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
   />
   <style>
-    body {
-      padding-top: 70px;
-    }
+
   </style>
 </head>
 <body>
-
-
-    <!-- MAIN -->
-    <main class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="login-container">
-                    <div class="login-header text-center mb-5">
-                        <h2>Sign in to your Account</h2>
-                    </div>
+  <!-- MAIN -->
+  <div class="container-fluid">
+    <div class="row">
+        <!-- SIGNUP FORM -->
+        <div class="col-lg-6">
+            <div class="container w-75">
+                <div class="text-center"> 
+                    <p class="h2 fw-bold mt-5 mb-4">Sign up to Hatdog</p> 
                 </div>
-
-                <form>
-                    <div class="text-left mb-3 position-relative">
-                        <label for="username">Username or Email Address</label>
-                        <input type="text" id="username" class="form-control" required>
-                    </div>
-                    <div class="text-left mb-3 position-relative">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" class="form-control" required minlength="6">
-                        <span class="position-absolute end-0 top-50  me-3" 
-                        style="cursor: pointer;" 
-                        onclick="togglePassword()">
-                        <i class="bi bi-eye-slash text-muted"></i>
-                        </span>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>   
-                    </div>
-                </form>
+                <div class="my-2">
+                    <form>
+                        <!-- username -->
+                        <label for="username" class="form-label mt-3 lead">Username:</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><i class="bi bi-person"></i></span>
+                          <input type="text" id="username" class="form-control" required>
+                        </div>
+                      
+                        <!-- email -->
+                        <label for="email" class="form-label mt-3 lead">Email address:</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                          <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <!-- password -->
+                        <label for="password" class="form-label mt-3 lead">Password:</label>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                          <input type="password" id="password" class="form-control" required>
+                          <span class="input-group-text" style="cursor: pointer;" onclick="togglePassword('password')">
+                            <i class="bi bi-eye-slash" id="togglePasswordIcon"></i>
+                          </span>
+                        </div>
+                        
+                        <!-- confirm password -->
+                        <label for="confirm-password" class="form-label lead">Confirm Password:</label>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                          <input type="password" id="confirm-password" class="form-control" required>
+                          <span class="input-group-text" style="cursor: pointer;" onclick="togglePassword('confirm-password')">
+                            <i class="bi bi-eye-slash" id="toggleConfirmPasswordIcon"></i>
+                          </span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary container mb-2">Sign Up</button>
+                    </form>
+                </div>
+                <div class="text-center">
+                    <p class="lead mb-5">Already have an account? <a href="account.html">Sign in</a>.</p>
+                </div>
             </div>
         </div>
-    </main>
-
-    <!--FOOTER-->
-    <footer class="bg-dark text-white mt-5 py-4 fixed-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <h5>Hatdog</h5>
-              <p class="text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                voluptatibus?
-              </p>
-            </div>
-            <div class="col-md-4 mb-3">
-              <h5>Quick Links</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="products.html" class="text-white text-decoration-none"
-                    >Products</a
-                  >
-                </li>
-                <li>
-                  <a href="about.html" class="text-white text-decoration-none"
-                    >About Us</a
-                  >
-                </li>
-                <li>
-                  <a href="contact.html" class="text-white text-decoration-none"
-                    >Contact</a
-                  >
-                </li>
+        <!-- HERO SECTION -->
+        <div class="col-lg-6 d-flex align-items-center text-white" style="min-height: 100vh; background: url('assets/img/hero-image.jpg') center/cover no-repeat;">
+          <div class="container text-center p-5" style="background-color: rgba(0,0,0,0.5);">
+              <h1 class="display-4 fw-bold">Create your new account</h1>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In pariatur, atque illo doloremque cupiditate autem distinctio ea nisi quam labore voluptatem itaque voluptates quaerat impedit, praesentium eveniet ab, illum assumenda.</p>
+              <ul class="list-unstyled mt-4">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>find what your looking for</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>look for good prices</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>buy construction tools</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>get it delivered on time</li>
               </ul>
-            </div>
-            <div class="col-md-4 mb-3">
-              <h5>Connect</h5>
-              <a href="#" class="text-white me-3"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" class="text-white me-3"
-                ><i class="bi bi-twitter"></i
-              ></a>
-              <a href="#" class="text-white me-3"
-                ><i class="bi bi-instagram"></i
-              ></a>
-            </div>
-          </div>
-          <hr />
-          <div class="text-center text-white">
-            <p class="mb-0">&copy; 2025 Hatdog. All rights reserved.</p>
           </div>
         </div>
-    </footer>
-    <script src="assets/js/signup.js"></script>
+    </div>
+  </div>
+  <script src="assets/js/signup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="assets/js/layout.js"></script>
 </body>
 </html>
