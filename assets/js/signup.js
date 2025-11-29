@@ -1,12 +1,14 @@
-function togglePassword() {
-    const passwordField = document.getElementById('password');
-    const eyeIcon = document.querySelector('.bi-eye-slash, .bi-eye');
+function togglePassword(fieldId) {
+    const passwordField = document.getElementById(fieldId);
+    const icon = passwordField.nextElementSibling.querySelector('i');
     
     if (passwordField.type === 'password') {
         passwordField.type = 'text';
-        eyeIcon.classList.replace('bi-eye-slash', 'bi-eye');
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
     } else {
         passwordField.type = 'password';
-        eyeIcon.classList.replace('bi-eye', 'bi-eye-slash');
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
     }
 }
