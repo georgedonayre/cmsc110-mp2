@@ -12,3 +12,10 @@ function togglePassword(fieldId) {
         icon.classList.add('bi-eye-slash');
     }
 }
+
+document.getElementById('SignUpForm').onsubmit = function(event) {
+    event.preventDefault();
+
+    window.location.href = 'index.html';
+    alert('Sign in successful!');
+};

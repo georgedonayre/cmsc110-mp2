@@ -10,3 +10,10 @@ function togglePassword() {
                 eyeIcon.classList.replace('bi-eye', 'bi-eye-slash');
             }
         }
+
+document.getElementById('SignInForm').onsubmit = function(event) {
+    event.preventDefault();
+
+    window.location.href = 'index.html';
+    alert('Sign in successful!');
+};
