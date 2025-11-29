@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+        margin-top: 100px;
+      }
+      .cart-item {
+        background: white;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 20px;
+      }
+
+      .cart-item img {
+        max-width: 100px;
+        border-radius: 5px;
+      }
+      .quality-control {
+        gap: 10px;
+      }
+
+      .quality-control button {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+      }
+
+      .quality-control input {
+        width: 60px;
+        text-align: center;
+      }
+
+      .order-summary {
+        background: white;
+        border-radius: 8px;
+        padding: 25px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Your Supplies</h2>
+            <span class="text-muted">1 item</span>
+          </div>
+          <div class="cart-item shadow">
+            <div class="row align-items-center">
+              <div class="col-md-2 col-3">
+                <img src="assets/img/hero-image.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="col-md-4 col-9">
+                <h5 class="mb-1">Cement</h5>
+                <p class="text-muted mb-0 small">20kg bag</p>
+              </div>
+              <div class="col-md-3 col-6 mt-3 mt-md-0">
+                <div class="quality-control d-flex align-items-center">
+                  <button class="btn btn-outline-secondary btn-sm">-</button>
+                  <input
+                    type="number"
+                    class="form-control form-control-sm"
+                    value="2"
+                    min="1"
+                  />
+                  <button class="btn btn-outline-secondary btn-sm">+</button>
+                </div>
+              </div>
+              <div class="col-md-2 col-4 mt-3 mt-md-0 text-end">
+                <p class="mb-0 fw-bold">P777.00</p>
+                <small class="text-muted">P333.00 each</small>
+              </div>
+              <div class="col-md-1 col-2 mt-3 mt-md-0 text-end">
+                <button class="btn btn-link text-danger p-0">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <a href="products.html" class="btn btn-outline-primary"
+              ><i class="bi bi-arrow-left"></i>Continue shopping</a
+            >
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="order-summary">
+            <h4 class="mb-4">Order summary</h4>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Subtotal (1 item)</span>
+              <span>P777.000</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Shipping fee</span>
+              <span>P100.00</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-4">
+              <strong>Total</strong>
+              <strong class="text-primary-emphasis h5 mb-0">P900.00</strong>
+            </div>
+            <button class="btn btn-primary w-100 btn-lg mb-2">Checkout</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HARDCODED munaa -->
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/layout.js"></script>
+  </body>
+</html>
