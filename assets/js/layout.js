@@ -3,6 +3,17 @@ fetch("header.html")
   .then((data) => {
     document.querySelector("#header").innerHTML = data;
 
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
     // account authentication sa navbar
     const accountNav = document.querySelector("#account-nav");
     const logoutNav = document.querySelector("#logout-nav");
