@@ -11,9 +11,3 @@ function togglePassword() {
   }
 }
 
-// document.getElementById('SignInForm').onsubmit = function(event) {
-//     event.preventDefault();
-
-//     window.location.href = 'index.html';
-//     alert('Sign in successful!');
-// };

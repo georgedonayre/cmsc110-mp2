@@ -13,13 +13,6 @@ function togglePassword(fieldId) {
   }
 }
 
-// document.getElementById("SignUpForm").onsubmit = function (event) {
-//   event.preventDefault();
-
-//   window.location.href = "index.html";
-//   alert("Sign in successful!");
-// };
-
 const form = document.querySelector("#SignUpForm");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
