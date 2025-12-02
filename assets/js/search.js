@@ -7,7 +7,7 @@ searchBtn.addEventListener("click", () => {
     // move to products.html?query=${query}
     window.location.href = `products.html?query=${encodeURIComponent(query)}`;
   } else {
-    alert("tanga lang?");
+    alert("Please enter a search term.");
   }
 });
 
