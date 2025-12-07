@@ -5,6 +5,18 @@
       "username": "fitz",
       "email": "isfitzhappy@withy.com",
       "password": "1234"
+    },
+    {
+      "id": "f56e",
+      "username": "molly",
+      "email": "hatdog@dev.com",
+      "password": "12"
+    },
+    {
+      "id": "50f5",
+      "username": "John Doe",
+      "email": "john@gmail.com",
+      "password": "12345"
     }
   ]
 }
