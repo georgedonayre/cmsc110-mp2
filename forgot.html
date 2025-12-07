@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      body {
+        padding-top: 10vh;
+      }
+      .order-count {
+        background-color: #dc3545;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        margin-left: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar setion -->
+    <div id="header"></div>
+
+    <!-- Forgot Password section -->
+    <div id="log_border"class="container w-50 mt-5 border border-2 border-start-0 border-end-0 border-info bg-info-subtle"
+    >
+      <div class="text-center">
+        <p class="h2 fw-bold mt-5 mb-0">We sent an OTP to your email</p>
+        <p class="lead">Please check your inbox and enter the code below to reset your password.</p>   
+      </div>
+
+      <div class="row justify-content-center text-center my-5">
+        <div class="bg-info-subtle col-lg-6 rounded-1">
+          <form id="SignInForm">
+            <!-- OTP -->
+            <label for="otp" class="form-label mt-4 lead text-center">One Time Password:</label>
+            <div class="input-group mb-2">
+              <span class="input-group-text"><i class="bi bi-shield-fill-check"></i></span>
+              <input
+                type="text"
+                id="otp"
+                placeholder="0-XXXXXX"
+                class="form-control"
+                minlength="8" maxlength="8"
+                required
+              />
+            </div>
+
+            <!-- Sign in button --> 
+            <button type="submit" class="btn btn-primary container mb-2">Submit</button>
+            <p class="h6 text-muted">OTP not received? <button id="reset" class="btn btn-outline-primary">Resend</button> in</p>
+            <p id="countdown" class="lead"></p>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end of Forgot Password section -->
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/forgot.js"></script>
+  </body>
+</html>
