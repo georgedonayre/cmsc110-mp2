@@ -19,6 +19,12 @@ form.addEventListener("submit", async (e) => {
   const email = document.querySelector("#email").value;
   const username = document.querySelector("#username").value;
   const password = document.querySelector("#password").value;
+  const confirmPassword = document.querySelector("#confirm-password").value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
 
   const res = await fetch(`http://localhost:3001/users?email=${email}`);
   const existingUsers = await res.json();
