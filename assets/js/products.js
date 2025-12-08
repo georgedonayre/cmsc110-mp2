@@ -101,9 +101,7 @@ const searchInput = document.querySelector("#searchInput");
 
 searchBtn.addEventListener("click", () => {
   const query = searchInput.value.trim();
-  window.location.href = `/products-refactored/index.html?query=${encodeURIComponent(
-    query
-  )}`;
+  window.location.href = `products-ref.html?query=${encodeURIComponent(query)}`;
 });
 
 searchInput.addEventListener("keypress", (e) => {
