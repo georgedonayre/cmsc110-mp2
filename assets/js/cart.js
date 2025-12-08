@@ -52,7 +52,7 @@ function displayCart() {
         <i class="bi bi-cart-x fs-1 text-muted"></i>
         <h3 class="mt-3">Your cart is empty</h3>
         <p class="text-muted">Add some products to get started!</p>
-        <a href="products.html" class="btn btn-primary mt-3">
+        <a href="products-ref.html" class="btn btn-primary mt-3">
           <i class="bi bi-arrow-left"></i> Continue Shopping
         </a>
       </div>
@@ -71,7 +71,7 @@ function displayCart() {
     </div>
     ${cartItems.map((item) => createCartItemHTML(item)).join("")}
     <div class="mt-4">
-      <a href="products.html" class="btn btn-outline-primary">
+      <a href="products-ref.html" class="btn btn-outline-primary">
         <i class="bi bi-arrow-left"></i> Continue shopping
       </a>
     </div>
