@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Pine Lumber",
+      "category": "wood",
+      "description": "Versatile softwood, ideal for construction and furniture",
+      "price": 180,
+      "priceMax": 450,
+      "unit": "per board foot",
+      "image": "",
+      "inStock": true,
+      "tags": ["lumber", "softwood", "construction"]
+    },
+    {
+      "id": 2,
+      "name": "Spruce Lumber",
+      "category": "wood",
+      "description": "Lightweight and strong, perfect for framing",
+      "price": 200,
+      "priceMax": 500,
+      "unit": "per board foot",
+      "image": "",
+      "inStock": true,
+      "tags": ["lumber", "softwood", "framing"]
+    },
+    {
+      "id": 3,
+      "name": "Oak Lumber",
+      "category": "wood",
+      "description": "Premium hardwood with beautiful grain patterns",
+      "price": 800,
+      "priceMax": 1500,
+      "unit": "per board foot",
+      "image": "",
+      "inStock": true,
+      "tags": ["lumber", "hardwood", "furniture"]
+    },
+    {
+      "id": 4,
+      "name": "Mahogany Lumber",
+      "category": "wood",
+      "description": "Rich color, excellent for fine furniture",
+      "price": 1200,
+      "priceMax": 2000,
+      "unit": "per board foot",
+      "image": "",
+      "inStock": true,
+      "tags": ["lumber", "hardwood", "premium"]
+    },
+    {
+      "id": 5,
+      "name": "Plywood Sheet",
+      "category": "wood",
+      "description": "4x8 sheets, 1/4\", 1/2\", and 3/4\" thickness",
+      "price": 500,
+      "priceMax": 1000,
+      "unit": "per sheet",
+      "image": "",
+      "inStock": true,
+      "tags": ["sheet", "plywood", "construction"]
+    },
+    {
+      "id": 6,
+      "name": "OSB Board",
+      "category": "wood",
+      "description": "Oriented strand board for structural applications",
+      "price": 400,
+      "priceMax": 800,
+      "unit": "per sheet",
+      "image": "",
+      "inStock": true,
+      "tags": ["sheet", "osb", "structural"]
+    },
+    {
+      "id": 7,
+      "name": "Rebar 8mm",
+      "category": "steel",
+      "description": "Standard reinforcement bar for concrete structures",
+      "price": 150,
+      "priceMax": 250,
+      "unit": "per piece",
+      "image": "",
+      "inStock": true,
+      "tags": ["rebar", "reinforcement", "construction"]
+    },
+    {
+      "id": 8,
+      "name": "Rebar 12mm",
+      "category": "steel",
+      "description": "Medium-duty reinforcement bar",
+      "price": 280,
+      "priceMax": 450,
+      "unit": "per piece",
+      "image": "",
+      "inStock": true,
+      "tags": ["rebar", "reinforcement", "construction"]
+    }
+  ]
+}
