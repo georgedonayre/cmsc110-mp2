@@ -9,9 +9,11 @@ This project uses JSON Server to simulate a backend for authentication.
 
 ## Setup
 
-1. Clone the repository  
-   git clone https://github.com/georgedonayre/cmsc110-mp2.git
-   cd cmsc110-mp2
+1. Clone the repository
+
+- git clone https://github.com/georgedonayre/cmsc110-mp2.git
+- cd cmsc110-mp2
+
 2. Install dependencies
    npm install
 3. Start JSON Server
