@@ -177,6 +177,32 @@ function setupCartEventListeners() {
       removeFromCart(productId);
     });
   });
+
+  document.querySelectorAll(".increase-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const productId = e.currentTarget.dataset.productId;
+      updateQty(productId, 1);
+    });
+  });
+
+  document.querySelectorAll(".decrease-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const productId = e.currentTarget.dataset.productId;
+      updateQty(productId, -1);
+    });
+  });
+}
+
+function updateQty(productId, change) {
+  cart[productId].quantity += change;
+
+  //basic check if last item na
+  if (cart[productId].quantity <= 0) {
+    delete cart[productId];
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCart();
 }
 
 function removeFromCart(productId) {
