@@ -1,6 +1,6 @@
 # AGJI SUPPLIES
 
-This project uses JSON Server to simulate a backend for authentication, products, and cart functionality.
+This project uses JSON Server to simulate a backend for authentication.
 
 ## Prerequisites
 
