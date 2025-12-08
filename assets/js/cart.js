@@ -84,6 +84,9 @@ function displayCart() {
     0
   );
   updateOrderSummary(itemCount, subtotal);
+
+  // must call this after everything is loaded
+  setupCartEventListeners();
 }
 
 // util function for creating html for each cart item
@@ -164,5 +167,22 @@ function updateOrderSummary(itemCount, subtotal) {
   const summaryContainer = document.querySelector(".order-summary");
   if (summaryContainer) {
     summaryContainer.innerHTML = summaryHTML;
+  }
+}
+
+function setupCartEventListeners() {
+  document.querySelectorAll(".remove-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const productId = e.currentTarget.dataset.productId;
+      removeFromCart(productId);
+    });
+  });
+}
+
+function removeFromCart(productId) {
+  if (confirm("Are you sure you want to remove this item?")) {
+    delete cart[productId];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
   }
 }
