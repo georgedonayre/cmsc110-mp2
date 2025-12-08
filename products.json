@@ -8,7 +8,7 @@
       "price": 180,
       "priceMax": 450,
       "unit": "per board foot",
-      "image": "",
+      "image": "https://www.pinetimberproducts.com.au/wp-content/uploads/2023/01/pine-timber-guide-2.jpg",
       "inStock": true,
       "tags": ["lumber", "softwood", "construction"]
     },
@@ -20,7 +20,7 @@
       "price": 200,
       "priceMax": 500,
       "unit": "per board foot",
-      "image": "",
+      "image": "https://cdn.shopify.com/s/files/1/0634/6283/4312/files/spruce-wood-3.jpg?v=1748870186",
       "inStock": true,
       "tags": ["lumber", "softwood", "framing"]
     },
@@ -32,7 +32,7 @@
       "price": 800,
       "priceMax": 1500,
       "unit": "per board foot",
-      "image": "",
+      "image": "https://static.wixstatic.com/media/38d960_b693ce9e64d2453a95dee6d68ffe08e8~mv2.jpg/v1/fill/w_743,h_492,al_c,q_85,usm_0.66_1.00_0.01/38d960_b693ce9e64d2453a95dee6d68ffe08e8~mv2.jpg",
       "inStock": true,
       "tags": ["lumber", "hardwood", "furniture"]
     },
@@ -44,7 +44,7 @@
       "price": 1200,
       "priceMax": 2000,
       "unit": "per board foot",
-      "image": "",
+      "image": "https://sinopro.ae/files/inventory/867_178896_unnamed.jpg",
       "inStock": true,
       "tags": ["lumber", "hardwood", "premium"]
     },
@@ -56,7 +56,7 @@
       "price": 500,
       "priceMax": 1000,
       "unit": "per sheet",
-      "image": "",
+      "image": "https://i0.wp.com/wood-create.com/wp-content/uploads/2023/02/plywood-boards.jpg?w=1200&ssl=1",
       "inStock": true,
       "tags": ["sheet", "plywood", "construction"]
     },
@@ -68,7 +68,7 @@
       "price": 400,
       "priceMax": 800,
       "unit": "per sheet",
-      "image": "",
+      "image": "https://www.ecohabitation.com/media/articles/images/7f/6a/7f6ac40a711b63f3d8ae38bc15c90c4c34e644d2/thumbs/a4THPgwaSU6s_1200x500_EE_R0wWf.jpg",
       "inStock": true,
       "tags": ["sheet", "osb", "structural"]
     },
@@ -80,7 +80,7 @@
       "price": 150,
       "priceMax": 250,
       "unit": "per piece",
-      "image": "",
+      "image": "https://www.ultratechcement.com/content/ultratechcement/in/en/home/home-building-basics/rebar-reinforcement-bar/_jcr_content/root/container/container/container/container/container/image_copy.coreimg.jpeg/1737101373323/rebar.jpeg",
       "inStock": true,
       "tags": ["rebar", "reinforcement", "construction"]
     },
@@ -92,7 +92,7 @@
       "price": 280,
       "priceMax": 450,
       "unit": "per piece",
-      "image": "",
+      "image": "https://www.ultratechcement.com/content/ultratechcement/in/en/home/home-building-basics/rebar-reinforcement-bar/_jcr_content/root/container/container/container/container/container/image_copy.coreimg.jpeg/1737101373323/rebar.jpeg",
       "inStock": true,
       "tags": ["rebar", "reinforcement", "construction"]
     }
