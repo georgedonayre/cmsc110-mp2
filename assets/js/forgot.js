@@ -26,3 +26,11 @@ updateCountdown();
 clearInterval(countdownInterval);
 countdownInterval = setInterval(updateCountdown, 1000);
 });
+
+document.getElementById('SignInForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const otpInput = document.getElementById('otp').value;
+    if (otpInput.length == 8) {
+        window.location.href = "index.html"
+    }
+});
