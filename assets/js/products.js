@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   filterProducts();
   displayProducts();
   updatePageTitle();
+  setupAddToCartButtons();
 });
 
 // get the products info from the json file
@@ -78,8 +79,9 @@ function createProductCard(product) {
           <div class="mt-auto">
             <div class="d-flex justify-content-between align-items-center">
               <span class="h5 text-primary mb-0">${priceDisplay}</span>
-              <button 
-                class="btn btn-primary btn-sm" 
+             <button 
+                class="btn btn-primary btn-sm add-to-cart-btn" 
+                data-product-id="${product.id}"
                 ${!product.inStock ? "disabled" : ""}
               >
                 <i class="bi bi-cart-plus"></i> Add to Cart
@@ -147,4 +149,31 @@ function filterProducts() {
       product.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
     );
   });
+}
+
+// button listeners
+function setupAddToCartButtons() {
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".add-to-cart-btn")) {
+      const button = e.target.closest(".add-to-cart-btn");
+      const productId = parseInt(button.dataset.productId);
+      addToCart(productId);
+    }
+  });
+}
+
+function addToCart(productId) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+  if (cart[productId]) {
+    cart[productId].quantity += 1;
+  } else {
+    cart[productId] = {
+      quantity: 1,
+    };
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Product added to cart!");
 }

@@ -4,6 +4,7 @@ fetch("header.html")
     document.querySelector("#header").innerHTML = data;
 
     const currentPage = window.location.pathname.split("/").pop();
+    console.log(currentPage);
 
     document.querySelectorAll(".nav-link").forEach((link) => {
       const linkPage = link.getAttribute("href");
