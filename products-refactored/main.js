@@ -1,8 +1,11 @@
 let allProducts = [];
+let filteredProducts = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   await getProducts();
+  filterProducts();
   displayProducts();
+  updatePageTitle();
 });
 
 // get the products info from the json file
@@ -24,17 +27,22 @@ function displayProducts() {
     return;
   }
 
-  if (allProducts.length === 0) {
+  if (filteredProducts.length === 0) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get("query");
+
     productsContainer.innerHTML = `
       <div class="col-12 text-center py-5">
-        <i class="bi bi-inbox fs-1 text-muted"></i>
-        <p class="text-muted mt-3">No products available.</p>
+        <i class="bi bi-search fs-1 text-muted"></i>
+        <p class="text-muted mt-3">No products found${
+          query ? ` for "${query}"` : ""
+        }.</p>
       </div>
     `;
     return;
   }
 
-  productsContainer.innerHTML = allProducts
+  productsContainer.innerHTML = filteredProducts
     .map((product) => createProductCard(product))
     .join("");
 }
@@ -82,4 +90,61 @@ function createProductCard(product) {
       </div>
     </div>
   `;
+}
+
+// SEARCH BAR
+
+const searchBtn = document.querySelector("#searchBtn");
+const searchInput = document.querySelector("#searchInput");
+
+searchBtn.addEventListener("click", () => {
+  const query = searchInput.value.trim();
+  window.location.href = `/products-refactored/index.html?query=${encodeURIComponent(
+    query
+  )}`;
+});
+
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    searchBtn.click();
+  }
+});
+
+// SEARCH QUERY MESSAGE
+
+function updatePageTitle() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get("query");
+  const pageTitle = document.querySelector("#pageTitle");
+
+  if (query && pageTitle) {
+    const count = filteredProducts.length;
+    pageTitle.textContent = `${count} Product${
+      count !== 1 ? "s" : ""
+    } for "${query}"`;
+  } else if (pageTitle) {
+    pageTitle.textContent = "All Products";
+  }
+}
+
+// FILTER LOGIC
+function filterProducts() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get("query");
+
+  if (!query) {
+    filteredProducts = allProducts;
+    return;
+  }
+
+  const searchTerm = query.toLowerCase().trim();
+
+  filteredProducts = allProducts.filter((product) => {
+    return (
+      product.name.toLowerCase().includes(searchTerm) ||
+      product.description.toLowerCase().includes(searchTerm) ||
+      product.category.toLowerCase().includes(searchTerm) ||
+      product.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
+    );
+  });
 }
