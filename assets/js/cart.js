@@ -159,7 +159,7 @@ function updateOrderSummary(itemCount, subtotal) {
         2
       )}</strong>
     </div>
-    <button class="btn btn-primary w-100 btn-lg mb-2" ${
+    <button class="btn btn-primary w-100 btn-lg mb-2" id="checkoutBtn" ${
       itemCount === 0 ? "disabled" : ""
     }>Checkout</button>
   `;
@@ -190,6 +190,21 @@ function setupCartEventListeners() {
       const productId = e.currentTarget.dataset.productId;
       updateQty(productId, -1);
     });
+  });
+
+  document.querySelector("#checkoutBtn").addEventListener("click", () => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn !== "true") {
+      const goLogin = confirm(
+        "You must have an account to checkout.\nGo to login page?"
+      );
+      if (goLogin) {
+        window.location.href = "account.html";
+      }
+      return;
+    }
+
+    window.location.href = "checkout.html";
   });
 }
 
